@@ -1,0 +1,14 @@
+[
+ {"key": "cos", "doll": "Clipboard Chloe", "plate": "Chloe", "desk": 0, "title": "Chief of Staff",
+  "role": "Chief-of-staff bot: keeps the owner's week organized and rolls up what the team found.", "bubble": "My job: keeping us organized"},
+ {"key": "watchdog", "doll": "Pipeline Paris", "plate": "Paris", "desk": 1, "title": "Pipeline Watchdog",
+  "role": "Keeps an eye on the sales pipeline and sends a daily pulse.", "bubble": "My job: the daily pipeline pulse"},
+ {"key": "signal", "doll": "Signal Sienna", "plate": "Sienna", "desk": 2, "title": "Signal Finder",
+  "role": "Finds the patterns across meetings and channels that no single conversation shows.", "bubble": "My job: finding the signal"},
+ {"key": "sandy", "doll": "Social Sandy", "plate": "Sandy", "desk": 3, "title": "Social Media Manager",
+  "role": "Helps with LinkedIn: comment ideas, who to connect with and a weekly post.", "bubble": "My job: LinkedIn comments + posts"},
+ {"key": "grok", "doll": "Get-It-Done Gigi", "plate": "Gigi", "desk": 4, "title": "Get-It-Done Teammate",
+  "role": "A teammate with her own computer who takes real work off the owner's plate.", "bubble": "My job: getting it done"},
+ {"key": "meeting", "doll": "Minutes Madison", "plate": "Madison", "desk": 5, "title": "Meeting Helper",
+  "role": "Meeting prep, live question nudges and notes.", "bubble": "My job: meeting prep + notes"}
+]

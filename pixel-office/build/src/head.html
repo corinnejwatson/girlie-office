@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>__OFFICE_NAME__ ✧ pixel office</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f6d6ee">
+<meta name="description" content="__DESCRIPTION__">
+<link rel="icon" type="image/png" href="__ICON__">
+__OGMETA__
+<style>
+@font-face{font-family:'Silk';src:url('__SILK__') format('woff2');}
+@font-face{font-family:'Bub';src:url('__BUB__') format('woff2');}
+*{box-sizing:border-box;cursor:url('__CURSOR__') 12 12, auto;}
+html,body{margin:0;height:100%;overflow:hidden;}
+body{background:#e6dcff;font-family:'Silk',monospace;color:#5b2a86;
+ background-image:radial-gradient(circle at 20% 30%,#fff 0 1.5px,transparent 2px),radial-gradient(circle at 70% 60%,#fff 0 1px,transparent 1.5px),
+  radial-gradient(circle at 40% 80%,#ffd6f0 0 1.5px,transparent 2px),radial-gradient(circle at 85% 15%,#d6f4ff 0 1px,transparent 1.5px),linear-gradient(180deg,#efe6ff,#e2d6ff 60%,#f4dcf4);
+ background-size:90px 90px,60px 60px,120px 120px,75px 75px,100% 100%;animation:twinkle 6s linear infinite;}
+@keyframes twinkle{to{background-position:90px 90px,-60px 60px,120px -120px,-75px -75px,0 0;}}
+header{height:30px;display:flex;align-items:center;gap:12px;white-space:nowrap;overflow:hidden;padding:0 12px;}
+h1{font-family:'Bub',cursive;font-weight:400;font-size:22px;margin:0;letter-spacing:1px;background:linear-gradient(90deg,#ff5fa2,#c45cf0,#5fc8ff,#ff5fa2);background-size:300% 100%;
+ -webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:1px #fff;filter:drop-shadow(2px 2px 0 #b48ae8);animation:shine 5s linear infinite;}
+@keyframes shine{to{background-position:300% 0;}}
+.sub{font-size:9px;color:#8a4fb8;overflow:hidden;text-overflow:ellipsis;} .sub b{color:#ff4f9a;}
+.sp{flex:1;}
+.hb{font:inherit;font-size:9px;padding:2px 8px;border-radius:9px;border:2px solid #e3c8ff;background:#fff8fd;color:#7a2f9e;flex:none;}
+.hb:hover,.hb.on{border-color:#ff6fb5;background:#ffe0f2;}
+#mus{border-color:#c45cf0;background:linear-gradient(#fff,#f3e8ff);}
+#mus.hint{border-color:#ff6fb5;color:#c23c80;animation:blink 1.2s steps(2) infinite;}
+@keyframes blink{50%{background:#ffe0f2;}}
+.pop{display:none;position:fixed;top:32px;right:12px;width:300px;z-index:25;font-size:9.5px;line-height:1.5;box-shadow:3px 3px 0 #c9a8ff;}
+.pop.open{display:block;}
+#stage{display:flex;justify-content:center;align-items:flex-start;height:calc(100% - 30px);padding:2px 8px 8px;}
+.box{background:#fff8fdf2;border:2px solid #e3c8ff;border-radius:12px;padding:8px 10px;}
+.box h3{font-family:'Bub',cursive;font-weight:400;font-size:14px;margin:0 0 4px;color:#ff4f9a;}
+.box ul{margin:0;padding-left:14px;} .box a{color:#c23c80;}
+#wrap{position:relative;flex:none;padding:4px;border-radius:14px;background:repeating-linear-gradient(45deg,#ffb8e0 0 8px,#ffd6f0 8px 16px);box-shadow:0 0 0 2px #fff,0 0 0 4px #c9a8ff,0 6px 18px #b48ae866;}
+canvas#c{display:block;border-radius:10px;image-rendering:pixelated;}
+#card{display:none;position:absolute;top:12px;width:300px;overflow:auto;background:#fff8fdf7;border:3px solid #ff6fb5;border-radius:14px;box-shadow:4px 4px 0 #c9a8ff;padding:10px 12px 12px;font-size:10.5px;line-height:1.45;z-index:5;}
+#card .top{display:flex;gap:10px;align-items:flex-start;}
+#card canvas{background:linear-gradient(#efe6ff,#ffe0f2);border:2px solid #e3c8ff;border-radius:10px;flex:none;image-rendering:pixelated;}
+#card h2{padding-right:14px;font-family:'Bub',cursive;font-weight:400;font-size:16px;margin:0 0 2px;color:#ff4f9a;}
+#card .aka{font-size:9px;color:#9a6ac8;margin:-2px 0 3px;}
+#card .lbl{font-size:9px;letter-spacing:1px;color:#b07ad8;margin-top:6px;}
+.tag{display:inline-block;font-size:9px;padding:1px 6px;border-radius:8px;background:#e8deff;color:#6a3aa0;} .tag.real{background:#d8ffe8;color:#1f7a4a;}
+#card p{margin:2px 0;}
+#card .status{margin-top:8px;padding:5px 9px 7px;border-radius:10px;background:#f7f0ff;border:1px dashed #d4bcf4;}
+#card .status .lbl:first-child{margin-top:0;}
+#card .vibe{display:inline-block;font-size:9px;padding:1px 7px;border-radius:8px;margin-right:2px;white-space:nowrap;}
+#card .vl{color:#6a3aa0;} #card .asof{font-size:8px;color:#b07ad8;margin-top:3px;text-align:right;} #card details{font-size:9.5px;color:#7a5a9a;}
+.x{position:absolute;right:8px;top:4px;border:0;background:none;font:inherit;font-size:14px;color:#c23c80;}
+.btns{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;}
+.btn,#card a.chat{font:inherit;font-size:10px;text-decoration:none;padding:4px 8px;border-radius:9px;border:2px solid #c45cf0;background:#f3e8ff;color:#5b2a86;}
+.btn.pink,#card a.chat{background:linear-gradient(#ff9ad5,#ff6fb5);border-color:#c23c80;color:#fff;text-shadow:1px 1px 0 #c23c80;}
+.btn:hover,#card a.chat:hover{filter:brightness(1.08);transform:translateY(-1px);}
+#tip{position:absolute;pointer-events:none;display:none;background:#fff;border:2px solid #c45cf0;border-radius:10px;padding:4px 8px;font-size:10px;max-width:250px;color:#5b2a86;box-shadow:2px 2px 0 #ff9ad5;z-index:6;}
+/* dress-up panel */
+#dress{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:30;background:#5b2a8655;}
+#dress .panel{width:min(640px,96vw);max-height:94vh;overflow:auto;background:#fff8fd;border:3px solid #ff6fb5;border-radius:18px;box-shadow:5px 5px 0 #c9a8ff;padding:10px 14px;position:relative;font-size:10px;}
+#dress h2{font-family:'Bub',cursive;font-weight:400;font-size:20px;margin:0;color:#ff4f9a;}
+#dress .who{display:flex;gap:5px;flex-wrap:wrap;margin:6px 0;}
+#dress .who button{font:inherit;font-size:9px;padding:3px 7px;border-radius:9px;border:2px solid #e3c8ff;background:#fff;color:#7a2f9e;}
+#dress .who button.on{border-color:#ff6fb5;background:#ffe0f2;}
+#dress .grid{display:flex;gap:12px;}
+#dress .pv{flex:none;width:150px;text-align:center;}
+#dress .pv canvas{background:linear-gradient(#efe6ff,#ffe0f2);border:2px solid #e3c8ff;border-radius:12px;image-rendering:pixelated;}
+#dress .opts{flex:1;min-width:0;}
+#dress .grp{margin-bottom:6px;} #dress .grp b{display:block;font-size:9px;letter-spacing:1px;color:#b07ad8;margin-bottom:2px;}
+#dress .chips{display:flex;flex-wrap:wrap;gap:4px;}
+#dress .chip{font:inherit;font-size:9px;padding:2px 7px;border-radius:9px;border:2px solid #e3c8ff;background:#fff;color:#5b2a86;}
+#dress .chip.on{border-color:#c23c80;background:#ff9ad5;color:#fff;}
+#dress .sw{width:18px;height:18px;border-radius:6px;border:2px solid #fff;box-shadow:0 0 0 2px #e3c8ff;padding:0;}
+#dress .sw.on{box-shadow:0 0 0 2px #c23c80,0 0 0 4px #fff;}
+#dress .stat{font-size:9px;color:#1f7a4a;margin-top:4px;min-height:12px;}
+/* ---------- phones ---------- */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+body{touch-action:manipulation;}
+html.phone,body.phone{height:auto;overflow-x:hidden;overflow-y:auto;}
+body.phone{min-height:100%;padding:0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);animation:none;}
+body.phone header{position:sticky;top:0;z-index:20;height:auto;min-height:44px;padding:calc(4px + env(safe-area-inset-top)) 10px 4px;gap:6px;background:#fbeaf6f2;border-bottom:2px solid #e3c8ff;}
+body.phone h1{font-size:19px;}
+body.phone .sub{display:none;}
+body.phone .hb{font-size:12px;padding:6px 10px;min-height:32px;border-radius:12px;}
+body.phone #mus{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;font-size:11px;padding:6px 6px;} body.phone .sp{display:none;} body.phone .hb[data-pop]{width:36px;padding:6px 0;font-size:14px;}
+body.phone .pop{top:calc(52px + env(safe-area-inset-top));left:10px;right:10px;width:auto;font-size:13px;}
+body.phone .box h3{font-size:17px;}
+body.phone #stage{height:auto;padding:0;display:block;}
+body.phone #wrap{padding:0;border-radius:0;box-shadow:none;background:none;}
+body.phone canvas#c{border-radius:0;touch-action:pan-y;}
+body.phone #tip{display:none!important;}
+body.phone #card{position:fixed;left:0!important;right:0!important;top:auto;bottom:0;width:auto;max-height:62vh;border-radius:20px 20px 0 0;border-width:3px 0 0;
+  padding:12px 16px calc(16px + env(safe-area-inset-bottom));font-size:13px;box-shadow:0 -6px 24px #b48ae866;z-index:22;}
+body.phone #card::before{content:'';display:block;width:44px;height:5px;border-radius:3px;background:#e3c8ff;margin:-4px auto 8px;}
+body.phone #card h2{font-size:20px;}
+body.phone #card .aka,body.phone #card .lbl,body.phone .tag,body.phone #card .vibe{font-size:12px;} body.phone #card .asof{font-size:10px;}
+body.phone .x{width:40px;height:40px;right:8px;top:8px;font-size:20px;border-radius:12px;background:#ffe0f2;}
+body.phone .btn,body.phone #card a.chat{font-size:13px;padding:10px 14px;border-radius:12px;}
+body.phone #dress{align-items:stretch;}
+body.phone #dress .panel{width:100vw;max-height:none;height:100%;border-radius:0;border:0;padding:calc(10px + env(safe-area-inset-top)) 14px calc(20px + env(safe-area-inset-bottom));font-size:13px;}
+body.phone #dress h2{font-size:22px;}
+body.phone #dress .grid{flex-direction:column;gap:6px;}
+body.phone #dress .pv{width:auto;display:flex;align-items:center;gap:10px;justify-content:center;position:sticky;top:-10px;background:#fff8fd;z-index:2;padding:4px 0;}
+body.phone #dress .pv canvas{width:72px!important;height:192px!important;}
+body.phone #dress .pv .btns{flex-direction:column;}
+body.phone #dress .who button{font-size:12px;padding:8px 10px;border-radius:12px;}
+body.phone #dress .grp b{font-size:12px;margin:6px 0 4px;}
+body.phone #dress .chips{gap:6px;}
+body.phone #dress .chip{font-size:12px;padding:9px 12px;border-radius:12px;}
+body.phone #dress .sw{width:36px;height:36px;border-radius:10px;}
+body.phone #dress .stat{font-size:12px;}
+body .sm{display:none;} body.phone h1 .sm{display:inline;} body.phone .sm{display:inline;} body.phone .lg{display:none;}
+</style>
+</head>
+<body>
+<header><h1><span class="lg">__OFFICE_NAME__</span><span class="sm">__OFFICE_SHORT__</span></h1><div class="sub">__TAGLINE__</div><div class="sp"></div>
+ <button class="hb" id="mus">♫ click anywhere for music</button><button class="hb" data-pop="pHow"><span class="lg">how 2 play ♡</span><span class="sm">?</span></button><button class="hb" data-pop="pCred"><span class="lg">credits</span><span class="sm">♡</span></button></header>
+<div class="box pop" id="pHow"><h3>how 2 play ♡</h3><ul>
+   <li>hover a doll to say hi, click (or tap) her for her card</li>
+   <li>doll selected + click/tap the floor = she walks there</li>
+   <li>click the <b>disco ball</b> = party mode</li>
+   <li>click the <b>boombox</b> = mute / unmute the music</li>
+   <li>click the <b>dressing room</b> or <b>Dress up ✨</b> = restyle her</li>
+   <li>click the sushi belt = ?</li>
+   <li>click <b>Mochi</b> the axolotl = a little philosophy</li>
+   <li style="color:#b07ad8">psst… there are secrets ✧</li></ul></div>
+<div class="box pop" id="pCred" style="color:#8a6aa8">Furniture, floors &amp; décor are from <a href="https://github.com/pixel-agents-hq/pixel-agents" target="_blank">Pixel Agents</a> (MIT License, © 2026 Pablo De Lucca). Pixel Agents' characters are based on the JIK-A-4 Metro City pack.<br>The dollz, outfits, disco, sushi bar, boba bar, dressing room &amp; boombox are original pixel art drawn in code. The music ("Glitter Cache") is an original track synthesized live in your browser, so no audio files are used.<br>Mochi the axolotl quotes famous philosophers.__CREDIT_EXTRA__<br>♫ Want the real thing? Listen to <a href="https://open.spotify.com/playlist/37i9dQZF1DZ06evO2Qvf34" target="_blank">This Is Slayyyter on Spotify</a>.</div>
+<div id="stage">
+ <div id="wrap"><canvas id="c"></canvas><div id="tip"></div><div id="card"></div></div>
+</div>
+<div id="dress"><div class="panel"><button class="x" id="dX">✕</button><h2>✨ Dressing Room ✨</h2><div class="who" id="dWho"></div>
+ <div class="grid"><div class="pv"><canvas id="dPv" width="108" height="288" style="width:108px;height:288px"></canvas>
+  <div class="btns" style="justify-content:center"><button class="btn" id="dRand">🎲 random</button><button class="btn" id="dReset">↺ reset</button></div><div class="stat" id="dStat"></div></div>
+ <div class="opts" id="dOpts"></div></div></div></div>
