@@ -1,0 +1,126 @@
+{
+ "_help": "Example data. build/relationships.py can compute this from your shared bot-findings files.",
+ "date": "2026-01-05",
+ "pairs": {
+  "cos|grok": {
+   "f": 58,
+   "t": 22,
+   "mood": "work buddies",
+   "why": [
+    "handoffs"
+   ]
+  },
+  "cos|meeting": {
+   "f": 62,
+   "t": 18,
+   "mood": "work buddies",
+   "why": [
+    "handoffs"
+   ]
+  },
+  "cos|sandy": {
+   "f": 52,
+   "t": 18,
+   "mood": "work buddies",
+   "why": [
+    "handoffs"
+   ]
+  },
+  "cos|signal": {
+   "f": 58,
+   "t": 18,
+   "mood": "work buddies",
+   "why": [
+    "handoffs"
+   ]
+  },
+  "cos|watchdog": {
+   "f": 70,
+   "t": 22,
+   "mood": "besties",
+   "why": [
+    "handoffs"
+   ]
+  },
+  "grok|meeting": {
+   "f": 52,
+   "t": 18,
+   "mood": "work buddies",
+   "why": [
+    "handoffs"
+   ]
+  },
+  "grok|sandy": {
+   "f": 62,
+   "t": 38,
+   "mood": "friendly rivals",
+   "why": [
+    "handoffs"
+   ]
+  },
+  "grok|signal": {
+   "f": 52,
+   "t": 22,
+   "mood": "work buddies",
+   "why": [
+    "handoffs"
+   ]
+  },
+  "grok|watchdog": {
+   "f": 52,
+   "t": 38,
+   "mood": "friendly rivals",
+   "why": [
+    "handoffs"
+   ]
+  },
+  "meeting|sandy": {
+   "f": 52,
+   "t": 18,
+   "mood": "work buddies",
+   "why": [
+    "handoffs"
+   ]
+  },
+  "meeting|signal": {
+   "f": 55,
+   "t": 18,
+   "mood": "work buddies",
+   "why": [
+    "handoffs"
+   ]
+  },
+  "meeting|watchdog": {
+   "f": 70,
+   "t": 38,
+   "mood": "friendly rivals",
+   "why": [
+    "handoffs"
+   ]
+  },
+  "sandy|signal": {
+   "f": 52,
+   "t": 22,
+   "mood": "work buddies",
+   "why": [
+    "handoffs"
+   ]
+  },
+  "sandy|watchdog": {
+   "f": 52,
+   "t": 22,
+   "mood": "work buddies",
+   "why": [
+    "handoffs"
+   ]
+  },
+  "signal|watchdog": {
+   "f": 58,
+   "t": 38,
+   "mood": "friendly rivals",
+   "why": [
+    "handoffs"
+   ]
+  }
+ }
+}

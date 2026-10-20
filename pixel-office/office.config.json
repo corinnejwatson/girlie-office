@@ -1,0 +1,10 @@
+{
+  "_help": "Edit these, then run ./refresh.sh. Keep them generic if you publish the page: no company, coworker or customer names.",
+  "office_name": "Girlie Office HQ",
+  "office_short": "Girlie HQ",
+  "wall_sign": "✧ girlie ✧",
+  "owner_label": "the boss",
+  "secret_word": "moon",
+  "tagline": "✧ the girlie office ✧ six bots, one marketing brain ✧",
+  "description": "A pixel-art office where a bot squad works, dances, eats sushi and plays dress-up. ✧"
+}

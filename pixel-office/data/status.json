@@ -1,0 +1,12 @@
+{
+  "_help": "Example data. Your chief-of-staff bot can rewrite this daily. Only working_on_public, vibe and vibe_line reach the page, and they must pass the share guard in build/build.py (no digits, links, @, or names with capital letters). Allowed vibes: thriving, chill, nervous, sure-shes-mad, relieved, proud.",
+  "updated": "2026-01-05T17:15:00",
+  "dolls": {
+    "Chloe":   {"working_on": "(private notes stay here; never shown on the page)", "working_on_public": "Keeping everyone organized", "vibe": "proud", "vibe_line": "She said great job today. We're good."},
+    "Paris":   {"working_on": "(private)", "working_on_public": "Double-checking every number", "vibe": "sure-shes-mad", "vibe_line": "Triple-checking everything now."},
+    "Sienna":  {"working_on": "(private)", "working_on_public": "Listening for what customers really say", "vibe": "chill", "vibe_line": "Pretty sure she likes me. Mostly."},
+    "Sandy":   {"working_on": "(private)", "working_on_public": "Drafting LinkedIn ideas", "vibe": "nervous", "vibe_line": "Got a nudge about my drafts... on it!"},
+    "Gigi":    {"working_on": "(private)", "working_on_public": "Building a big marketing plan", "vibe": "relieved", "vibe_line": "Finally a real project!"},
+    "Madison": {"working_on": "(private)", "working_on_public": "Turning meetings into to-dos", "vibe": "thriving", "vibe_line": "Every meeting prepped today."}
+  }
+}
